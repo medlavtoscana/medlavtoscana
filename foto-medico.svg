@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-labelledby="foto-t">
+  <title id="foto-t">Spazio per la foto del medico</title>
+  <defs><clipPath id="cornice"><rect width="400" height="480" rx="28"/></clipPath></defs>
+  <g clip-path="url(#cornice)">
+    <rect width="400" height="480" fill="#ECE8F6"/>
+    <circle cx="326" cy="86" r="48" fill="#F7DA9B" opacity=".8"/>
+    <path d="M0 356c80-40 150-30 220-10s130 10 180-10v144H0Z" fill="#DAD4EF"/>
+    <circle cx="200" cy="196" r="72" fill="#C9C1E6"/>
+    <path d="M64 480c12-104 70-152 136-152s124 48 136 152Z" fill="#B7ADDE"/>
+  </g>
+  <g transform="translate(318 398)">
+    <circle r="32" fill="#fff"/>
+    <rect x="-15" y="-9" width="30" height="21" rx="5" fill="none" stroke="#7667B0" stroke-width="3"/>
+    <circle cy="1.5" r="5.5" fill="none" stroke="#7667B0" stroke-width="3"/>
+    <path d="M-6 -9l3-5h6l3 5" fill="none" stroke="#7667B0" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+</svg>

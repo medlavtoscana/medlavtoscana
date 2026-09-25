@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" role="img" aria-labelledby="dig-t">
+  <title id="dig-t">Computer, telefono e documento firmato digitalmente con scadenze e promemoria</title>
+  <defs>
+    <filter id="ombra-d" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1E2B3C" flood-opacity=".13"/>
+    </filter>
+  </defs>
+  <circle cx="250" cy="205" r="175" fill="#fff" opacity=".55"/>
+
+  <!-- portatile -->
+  <rect x="62" y="84" width="300" height="192" rx="14" fill="#1E2B3C"/>
+  <rect x="74" y="96" width="276" height="168" rx="6" fill="#fff"/>
+  <path d="M36 276h352l-14 20a8 8 0 0 1-6.6 3.5H56.6A8 8 0 0 1 50 296Z" fill="#C9D3DE"/>
+  <rect x="182" y="276" width="60" height="7" rx="3.5" fill="#AEB9C6"/>
+  <path d="M74 102a6 6 0 0 1 6-6h40v168H80a6 6 0 0 1-6-6Z" fill="#F4F7F9"/>
+  <rect x="86" y="112" width="22" height="22" rx="7" fill="#1C6E73"/>
+  <path d="M91.5 123l4 4 7-7.5" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="89" y="148" width="16" height="16" rx="5" fill="#E4ECF7"/>
+  <rect x="89" y="174" width="16" height="16" rx="5" fill="#ECE8F6"/>
+  <rect x="89" y="200" width="16" height="16" rx="5" fill="#FBEBDD"/>
+  <rect x="136" y="112" width="110" height="10" rx="5" fill="#1E2B3C" opacity=".85"/>
+  <rect x="136" y="128" width="70" height="7" rx="3.5" fill="#C9D3DE"/>
+  <rect x="290" y="110" width="46" height="18" rx="9" fill="#E3F1F0"/>
+  <path d="M136 150h200M136 180h200M136 210h200M136 240h200" stroke="#EEF2F6" stroke-width="2"/>
+  <circle cx="146" cy="165" r="7" fill="#2E8C86"/>
+  <path d="M142.5 165l2.5 2.5 4.5-5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="160" y="162" width="90" height="6" rx="3" fill="#D5DDE6"/>
+  <rect x="300" y="158" width="36" height="14" rx="7" fill="#E3F1F0"/>
+  <circle cx="146" cy="195" r="7" fill="#2E8C86"/>
+  <path d="M142.5 195l2.5 2.5 4.5-5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="160" y="192" width="76" height="6" rx="3" fill="#D5DDE6"/>
+  <rect x="300" y="188" width="36" height="14" rx="7" fill="#E3F1F0"/>
+  <circle cx="146" cy="225" r="6.5" fill="#fff" stroke="#C9D3DE" stroke-width="2"/>
+  <rect x="160" y="222" width="84" height="6" rx="3" fill="#D5DDE6"/>
+  <rect x="300" y="218" width="36" height="14" rx="7" fill="#FBEBDD"/>
+
+  <!-- documento firmato -->
+  <g filter="url(#ombra-d)"><path d="M360 34h78l24 24v118a12 12 0 0 1-12 12h-90a12 12 0 0 1-12-12V46a12 12 0 0 1 12-12Z" fill="#fff"/></g>
+  <path d="M438 34v14a10 10 0 0 0 10 10h14" fill="#E4ECF7"/>
+  <rect x="362" y="56" width="34" height="14" rx="4" fill="#B35E74"/>
+  <rect x="362" y="84" width="72" height="6" rx="3" fill="#C3D2EA"/>
+  <rect x="362" y="98" width="60" height="6" rx="3" fill="#C3D2EA"/>
+  <rect x="362" y="112" width="66" height="6" rx="3" fill="#C3D2EA"/>
+  <path d="M364 150c8-2 10-14 16-14s2 14 8 14 6-7 11-7 4 4 9 4" fill="none" stroke="#4B6FAE" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="440" cy="160" r="14" fill="#5C8A58"/>
+  <path d="M433.5 160l4.5 4.5 8.5-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- telefono -->
+  <g filter="url(#ombra-d)"><rect x="392" y="198" width="96" height="176" rx="18" fill="#1E2B3C"/></g>
+  <rect x="400" y="208" width="80" height="156" rx="12" fill="#F4F7F9"/>
+  <rect x="426" y="213" width="28" height="5" rx="2.5" fill="#1E2B3C"/>
+  <rect x="406" y="234" width="68" height="46" rx="10" fill="#fff"/>
+  <circle cx="420" cy="250" r="8" fill="#FBEBDD"/>
+  <path d="M416.5 253v-3a3.5 3.5 0 0 1 7 0v3l1 1.3h-9Z" fill="#C77E42"/>
+  <circle cx="420" cy="256.2" r="1.2" fill="#C77E42"/>
+  <rect x="432" y="246" width="34" height="5" rx="2.5" fill="#1E2B3C" opacity=".8"/>
+  <rect x="432" y="255" width="24" height="4" rx="2" fill="#C9D3DE"/>
+  <rect x="414" y="268" width="52" height="5" rx="2.5" fill="#D5DDE6"/>
+  <rect x="406" y="288" width="68" height="34" rx="10" fill="#fff"/>
+  <circle cx="420" cy="305" r="8" fill="#E3F1F0"/>
+  <path d="M416.5 305l2.5 2.5 5-5.5" stroke="#2E8C86" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="432" y="300" width="34" height="5" rx="2.5" fill="#1E2B3C" opacity=".8"/>
+  <rect x="432" y="309" width="20" height="4" rx="2" fill="#C9D3DE"/>
+</svg>
