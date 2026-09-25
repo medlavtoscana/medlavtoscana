@@ -264,7 +264,9 @@ a:hover { color: var(--brand-dark); }
 .doctor-meta li { display: flex; align-items: flex-start; gap: .7rem; }
 .doctor-meta .dot-ico { width: 2rem; height: 2rem; }
 .doctor-meta svg.i { width: 1.05rem; height: 1.05rem; }
-.doctor-bio { margin-top: 1.4rem; max-width: 36rem; }
+.doctor-bio { margin-top: 1.4rem; max-width: 40rem; }
+.skills { list-style: none; margin: 1.25rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; max-width: 40rem; }
+.skills li { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .35rem .85rem; font-size: .92rem; font-weight: 500; color: var(--ink); }
 
 /* ---------- Contatti ---------- */
 .contact-panel { display: grid; gap: 2rem; align-items: center; border-radius: var(--r-panel); padding: clamp(1.75rem, 5vw, 3.5rem); }
