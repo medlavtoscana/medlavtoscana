@@ -64,7 +64,7 @@
           <h1>Medico competente per la tua azienda, in Toscana</h1>
           <p class="lead">Nomina, visite in azienda, sopralluoghi e formazione di primo soccorso in tutta la Toscana, con un unico referente. Giudizi di idoneità, cartelle sanitarie e scadenze gestiti in digitale, senza un foglio di carta.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="mailto:info@medlavtoscana.it?subject=Richiesta%20preventivo%20medicina%20del%20lavoro&amp;body=Azienda%3A%0D%0ASettore%20di%20attivit%C3%A0%3A%0D%0ANumero%20di%20lavoratori%3A%0D%0ASede%20operativa%3A%0D%0ARichiesta%3A%0D%0A">Richiedi un preventivo</a>
+            <a class="btn btn-primary" data-preventivo href="mailto:info@medlavtoscana.it?subject=Richiesta%20preventivo%20medicina%20del%20lavoro&amp;body=Azienda%3A%0D%0ASettore%20di%20attivit%C3%A0%3A%0D%0ANumero%20di%20lavoratori%3A%0D%0ASede%20operativa%3A%0D%0ARichiesta%3A%0D%0A">Richiedi un preventivo</a>
             <a class="btn btn-ghost" href="tel:+393891569617">
               <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h3l1.8 4.6-2.3 1.4a11.5 11.5 0 0 0 6.5 6.5l1.4-2.3 4.6 1.8v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3.5 5.7a2 2 0 0 1 2-2.2Z"/></svg>
               Chiama
@@ -394,7 +394,7 @@
               </li>
             </ul>
             <div class="actions">
-              <a class="btn btn-primary" href="mailto:info@medlavtoscana.it?subject=Richiesta%20preventivo%20medicina%20del%20lavoro&amp;body=Azienda%3A%0D%0ASettore%20di%20attivit%C3%A0%3A%0D%0ANumero%20di%20lavoratori%3A%0D%0ASede%20operativa%3A%0D%0ARichiesta%3A%0D%0A">Richiedi un preventivo</a>
+              <a class="btn btn-primary" data-preventivo href="mailto:info@medlavtoscana.it?subject=Richiesta%20preventivo%20medicina%20del%20lavoro&amp;body=Azienda%3A%0D%0ASettore%20di%20attivit%C3%A0%3A%0D%0ANumero%20di%20lavoratori%3A%0D%0ASede%20operativa%3A%0D%0ARichiesta%3A%0D%0A">Richiedi un preventivo</a>
               <a class="btn btn-ghost" href="https://wa.me/393891569617?text=Buongiorno%2C%20vorrei%20un%20preventivo%20per%20la%20medicina%20del%20lavoro." target="_blank" rel="noopener">
                 <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H10l-4.5 3.5v-3.5H4Z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg>
                 Scrivici su WhatsApp
@@ -444,5 +444,166 @@
       <p class="footer-bottom">© 2026 medlavtoscana</p>
     </div>
   </footer>
+  <!-- ===== Modulo richiesta preventivo ===== -->
+  <dialog id="preventivo" class="modal" aria-labelledby="preventivo-t">
+    <div class="modal-inner">
+      <button type="button" class="modal-close" data-close aria-label="Chiudi">
+        <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <h2 id="preventivo-t">Richiedi un preventivo</h2>
+
+      <div class="guide t-acqua">
+        <p><strong>Per un preventivo preciso bastano pochi dati:</strong></p>
+        <ul>
+          <li>azienda e sede operativa;</li>
+          <li>settore di attività e numero di lavoratori;</li>
+          <li>mansioni principali e rischi indicati nel DVR, se li conosci.</li>
+        </ul>
+        <p>Il DVR non serve adesso: si condivide dopo il primo contatto. Non inserire dati sanitari dei lavoratori.</p>
+      </div>
+
+      <form id="form-preventivo" novalidate>
+        <!-- DA COMPLETARE: chiave Web3Forms ricevuta via email all'indirizzo info@medlavtoscana.it -->
+        <input type="hidden" name="access_key" value="INSERISCI_ACCESS_KEY">
+        <input type="hidden" name="from_name" value="Sito medlavtoscana">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="form-grid">
+          <label class="field"><span>Azienda <span class="req">*</span></span>
+            <input name="azienda" required autocomplete="organization" placeholder="Ragione sociale"></label>
+          <label class="field"><span>Referente <span class="req">*</span></span>
+            <input name="referente" required autocomplete="name" placeholder="Nome e cognome"></label>
+          <label class="field"><span>Email <span class="req">*</span></span>
+            <input type="email" name="email" required autocomplete="email" placeholder="nome@azienda.it"></label>
+          <label class="field"><span>Telefono</span>
+            <input type="tel" name="telefono" autocomplete="tel" placeholder="Per essere richiamati"></label>
+          <label class="field"><span>Sede operativa <span class="req">*</span></span>
+            <input name="sede" required placeholder="Comune e provincia, es. Prato (PO)"></label>
+          <label class="field"><span>Settore di attività <span class="req">*</span></span>
+            <select name="settore" required>
+              <option value="" selected disabled>Seleziona</option>
+              <option>Uffici e servizi</option>
+              <option>Logistica e magazzini</option>
+              <option>Industria e artigianato</option>
+              <option>Edilizia</option>
+              <option>Commercio</option>
+              <option>Ristorazione e turismo</option>
+              <option>Altro</option>
+            </select></label>
+          <label class="field"><span>Numero di lavoratori <span class="req">*</span></span>
+            <input type="number" name="lavoratori" min="1" inputmode="numeric" required placeholder="Es. 12"></label>
+          <fieldset class="field"><legend>Medico competente</legend>
+            <div class="options">
+              <label class="option"><input type="radio" name="medico_competente" value="Prima nomina"> Prima nomina</label>
+              <label class="option"><input type="radio" name="medico_competente" value="Cambio medico"> Cambio medico</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <fieldset class="field field-full"><legend>Servizi di interesse</legend>
+          <div class="options">
+            <label class="option"><input type="checkbox" name="servizi" value="Nomina e sorveglianza sanitaria"> Nomina e sorveglianza sanitaria</label>
+            <label class="option"><input type="checkbox" name="servizi" value="Sopralluogo"> Sopralluogo</label>
+            <label class="option"><input type="checkbox" name="servizi" value="Formazione primo soccorso"> Formazione primo soccorso</label>
+          </div>
+        </fieldset>
+
+        <label class="field field-full"><span>Mansioni, rischi e note</span>
+          <textarea name="mansioni" rows="4" placeholder="Es. 5 impiegati al videoterminale, 3 magazzinieri con carrello elevatore, rumore in produzione"></textarea></label>
+
+        <label class="check"><input type="checkbox" name="privacy" value="Sì" required>
+          <span>Ho letto l'<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a> <span class="req">*</span></span></label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Invia la richiesta</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="form-success" hidden>
+        <span class="dot-ico t-salvia c-salvia"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+        <h3>Richiesta inviata</h3>
+        <p>Riceverai una risposta all'indirizzo email indicato.</p>
+        <button type="button" class="btn btn-ghost" data-close>Chiudi</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+  (function () {
+    var dlg = document.getElementById('preventivo');
+    var form = document.getElementById('form-preventivo');
+    if (!dlg || !form || typeof dlg.showModal !== 'function') return; // senza supporto resta il collegamento email
+
+    var ok = dlg.querySelector('.form-success');
+    var status = form.querySelector('.form-status');
+    var invia = form.querySelector('button[type=submit]');
+    var etichette = {
+      azienda: 'Azienda', referente: 'Referente', email: 'Email', telefono: 'Telefono', sede: 'Sede operativa',
+      settore: 'Settore', lavoratori: 'Numero di lavoratori', medico_competente: 'Medico competente',
+      servizi: 'Servizi di interesse', mansioni: 'Mansioni, rischi e note'
+    };
+
+    function apri(e) {
+      e.preventDefault();
+      form.hidden = false; ok.hidden = true; status.textContent = ''; status.className = 'form-status';
+      dlg.showModal();
+      document.documentElement.classList.add('modal-open');
+      // su computer il cursore va subito nel primo campo; su telefono non apriamo la tastiera sopra le istruzioni
+      if (window.matchMedia('(pointer: fine)').matches) form.querySelector('[name=azienda]').focus();
+    }
+    document.querySelectorAll('[data-preventivo]').forEach(function (a) { a.addEventListener('click', apri); });
+    dlg.querySelectorAll('[data-close]').forEach(function (b) { b.addEventListener('click', function () { dlg.close(); }); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', function () { document.documentElement.classList.remove('modal-open'); });
+
+    function raccogli() {
+      var dati = {};
+      new FormData(form).forEach(function (v, k) {
+        if (typeof v !== 'string') return;
+        v = v.trim(); if (!v) return;
+        dati[k] = dati[k] ? dati[k] + ', ' + v : v;
+      });
+      return dati;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var dati = raccogli();
+      if (dati.botcheck) return;
+      delete dati.botcheck;
+      dati.subject = 'Richiesta preventivo: ' + dati.azienda;
+
+      // finché manca la chiave del servizio, la richiesta parte dall'app di posta
+      if (!dati.access_key || dati.access_key.indexOf('INSERISCI') === 0) {
+        var righe = Object.keys(etichette).filter(function (k) { return dati[k]; })
+          .map(function (k) { return etichette[k] + ': ' + dati[k]; });
+        location.href = 'mailto:info@medlavtoscana.it?subject=' + encodeURIComponent(dati.subject) +
+          '&body=' + encodeURIComponent(righe.join('\n'));
+        return;
+      }
+
+      invia.disabled = true;
+      status.className = 'form-status';
+      status.textContent = 'Invio in corso…';
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(dati)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (r) {
+          if (!r.success) throw new Error(r.message);
+          form.reset(); form.hidden = true; ok.hidden = false; status.textContent = '';
+        })
+        .catch(function () {
+          status.className = 'form-status err';
+          status.innerHTML = 'Invio non riuscito. Scrivi a <a href="mailto:info@medlavtoscana.it">info@medlavtoscana.it</a> oppure su <a href="https://wa.me/393891569617" target="_blank" rel="noopener">WhatsApp</a>.';
+        })
+        .then(function () { invia.disabled = false; });
+    });
+  })();
+  </script>
 </body>
 </html>
