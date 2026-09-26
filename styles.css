@@ -91,8 +91,9 @@ a:hover { color: var(--brand-dark); }
   font-family: var(--display); font-weight: 700; font-size: 1.35rem; letter-spacing: -0.02em; line-height: 1;
 }
 .brand:hover { color: var(--ink); }
-.brand svg { width: 2.2rem; height: 2.2rem; flex: none; }
-.brand .brand-2 { color: var(--brand); font-weight: 600; }
+.brand img { display: block; height: 2.9rem; width: auto; }
+@media (max-width: 40rem) { .brand img { height: 2.5rem; } }
+.footer-brand img { height: 4.75rem; }
 .site-nav { display: flex; align-items: center; gap: 1.5rem; font-weight: 500; }
 .site-nav a { color: var(--ink-2); text-decoration: none; }
 .site-nav a:hover { color: var(--ink); }
@@ -291,7 +292,6 @@ a:hover { color: var(--brand-dark); }
 .footer-links a:hover { text-decoration: underline; }
 .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
 .footer-brand { color: #fff; }
-.footer-brand .brand-2 { color: #8FD1CB; }
 .footer-legal { margin-top: 1rem; line-height: 1.7; }
 .footer-links, .footer-contacts { display: grid; gap: .5rem; align-content: start; }
 .footer-contacts a { text-decoration: none; }
