@@ -9,6 +9,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="manrope-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <meta name="theme-color" content="#1D3A31">
 </head>
@@ -17,7 +18,10 @@
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="./"><img src="logo-header.svg" width="1023" height="240" alt="medlavtoscana, medicina del lavoro"></a>
+      <a class="brand" href="./" aria-label="medlavtoscana, medicina del lavoro, pagina iniziale">
+        <span class="brand-mark"><img src="marchio-chiaro.svg" width="240" height="240" alt=""></span>
+        <span class="brand-text" aria-hidden="true"><span class="brand-name"><b>medlav</b>toscana</span><span class="brand-payoff">Medicina del lavoro</span></span>
+      </a>
       <nav class="site-nav" aria-label="Sezioni">
         <a href="./#servizi">Servizi</a>
         <a href="./#accertamenti">Accertamenti</a>
@@ -87,7 +91,10 @@
       </div>
       <div class="footer">
         <div>
-          <img src="logo-header.svg" width="1023" height="240" alt="medlavtoscana">
+          <a class="brand brand-footer" href="./" aria-label="medlavtoscana, medicina del lavoro">
+            <span class="brand-mark"><img src="marchio-chiaro.svg" width="240" height="240" alt=""></span>
+            <span class="brand-text" aria-hidden="true"><span class="brand-name"><b>medlav</b>toscana</span><span class="brand-payoff">Medicina del lavoro</span></span>
+          </a>
           <p>medlavtoscana è un marchio di Dott. Gianfranco Madeo<br>P.IVA 03752810782<br>Iscritto all'Elenco nazionale dei medici competenti, n.&nbsp;23954</p>
         </div>
         <nav aria-label="Collegamenti">

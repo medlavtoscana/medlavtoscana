@@ -3,6 +3,9 @@
    Un solo accento caldo (ocra) per le azioni principali. */
 
 @font-face { font-family: "Young Serif"; src: url("young-serif-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Manrope"; src: url("manrope-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Manrope"; src: url("manrope-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Manrope"; src: url("manrope-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
 @font-face { font-family: "Figtree"; src: url("figtree-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Figtree"; src: url("figtree-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: "Figtree"; src: url("figtree-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
@@ -61,13 +64,20 @@ svg.i { width: 1.15rem; height: 1.15rem; flex: none; fill: none; stroke: current
 .verde { background: var(--cipresso); color: var(--latte); }
 .site-header { position: sticky; top: 0; z-index: 20; background: var(--cipresso); border-bottom: 1px solid rgba(169, 195, 179, .18); }
 .header-inner { display: flex; align-items: center; gap: 1.75rem; min-height: 4.75rem; }
-.brand img { height: 3.5rem; width: auto; }
+/* Logo: marchio come immagine, nome e scritta come testo vero, nitidi a ogni dimensione */
+.brand { --logo: 1.6rem; display: inline-flex; align-items: center; gap: calc(var(--logo) * .42); text-decoration: none; color: #fff; }
+.brand-mark { flex: none; width: calc(var(--logo) * 1.95); height: calc(var(--logo) * 1.95); }
+.brand-mark img { width: 100%; height: 100%; }
+.brand-text { display: grid; justify-items: start; line-height: 1; }
+.brand-name { font-family: "Manrope", var(--sans); font-weight: 500; font-size: var(--logo); letter-spacing: -0.01em; color: #8FD1CB; }
+.brand-name b { font-weight: 700; color: #fff; }
+.brand-payoff { margin-top: calc(var(--logo) * .2); font-family: "Manrope", var(--sans); font-weight: 600; font-size: calc(var(--logo) * .52); letter-spacing: .17em; text-transform: uppercase; color: #B7CBC0; white-space: nowrap; }
 .site-nav { display: flex; gap: 1.5rem; font-weight: 500; }
 .site-nav a { color: var(--salvia); text-decoration: none; }
 .site-nav a:hover { color: #fff; }
 .header-cta { margin-left: auto; display: flex; gap: .6rem; }
 @media (max-width: 70rem) { .site-nav { display: none; } }
-@media (max-width: 34rem) { .header-cta .btn-ocra { display: none; } .brand img { height: 3.1rem; } }
+@media (max-width: 34rem) { .header-cta .btn-ocra { display: none; } .brand { --logo: 1.4rem; } }
 
 .hero { display: grid; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; padding-block: clamp(2rem, 5vw, 3.25rem) clamp(2.5rem, 5vw, 3.5rem); }
 @media (min-width: 60rem) { .hero { grid-template-columns: 1.3fr .8fr; } }
@@ -181,7 +191,7 @@ svg.i { width: 1.15rem; height: 1.15rem; flex: none; fill: none; stroke: current
 .contatti .email { color: #fff; font-weight: 600; }
 .contatti .actions { margin-top: 0; }
 .footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem 3rem; padding-block: 1.75rem 2.25rem; font-size: .92rem; color: var(--salvia); }
-.footer img { height: 3.8rem; width: auto; margin-bottom: .9rem; }
+.brand-footer { --logo: 1.75rem; margin-bottom: 1rem; }
 .footer a { color: var(--latte); text-decoration: none; }
 .footer a:hover { text-decoration: underline; }
 .footer nav { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; align-content: start; }
@@ -230,3 +240,4 @@ html.modal-open { overflow: hidden; }
 .doc ul { margin: .5rem 0 0; padding-left: 1.25rem; }
 .doc li + li { margin-top: .35rem; }
 .doc .updated { margin-top: .75rem; color: var(--ink-3); }
+.footer .brand:hover { text-decoration: none; }
