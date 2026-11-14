@@ -61,13 +61,13 @@ svg.i { width: 1.15rem; height: 1.15rem; flex: none; fill: none; stroke: current
 .verde { background: var(--cipresso); color: var(--latte); }
 .site-header { position: sticky; top: 0; z-index: 20; background: var(--cipresso); border-bottom: 1px solid rgba(169, 195, 179, .18); }
 .header-inner { display: flex; align-items: center; gap: 1.75rem; min-height: 4.75rem; }
-.brand img { height: 2.9rem; width: auto; }
+.brand img { height: 3.2rem; width: auto; }
 .site-nav { display: flex; gap: 1.5rem; font-weight: 500; }
 .site-nav a { color: var(--salvia); text-decoration: none; }
 .site-nav a:hover { color: #fff; }
 .header-cta { margin-left: auto; display: flex; gap: .6rem; }
 @media (max-width: 70rem) { .site-nav { display: none; } }
-@media (max-width: 34rem) { .header-cta .btn-ocra { display: none; } .brand img { height: 2.5rem; } }
+@media (max-width: 34rem) { .header-cta .btn-ocra { display: none; } .brand img { height: 2.7rem; } }
 
 .hero { display: grid; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; padding-block: clamp(2rem, 5vw, 3.25rem) clamp(2.5rem, 5vw, 3.5rem); }
 @media (min-width: 60rem) { .hero { grid-template-columns: 1.3fr .8fr; } }
@@ -181,7 +181,7 @@ svg.i { width: 1.15rem; height: 1.15rem; flex: none; fill: none; stroke: current
 .contatti .email { color: #fff; font-weight: 600; }
 .contatti .actions { margin-top: 0; }
 .footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem 3rem; padding-block: 1.75rem 2.25rem; font-size: .92rem; color: var(--salvia); }
-.footer img { height: 3.6rem; width: auto; margin-bottom: .9rem; }
+.footer img { height: 3.4rem; width: auto; margin-bottom: .9rem; }
 .footer a { color: var(--latte); text-decoration: none; }
 .footer a:hover { text-decoration: underline; }
 .footer nav { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; align-content: start; }
