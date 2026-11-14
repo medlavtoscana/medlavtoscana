@@ -164,11 +164,12 @@ svg.i { width: 1.15rem; height: 1.15rem; flex: none; fill: none; stroke: current
 .province { margin-top: 1.1rem; color: var(--ink-2); }
 .province strong { color: var(--ink); font-weight: 600; }
 
-.medico-testo p + p { margin-top: .8rem; }
-.medico-testo .contatto { margin-top: 1rem; font-weight: 500; }
-.competenze { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem 1.5rem; }
-@media (min-width: 36rem) { .competenze { grid-template-columns: 1fr 1fr; } }
-.competenze li { padding-left: 1.1rem; position: relative; color: var(--ink-2); }
+.medico-testo p, .competenze li { font-size: 1rem; line-height: 1.6; color: var(--ink-2); }
+.medico-testo p { margin-top: .75rem; max-width: 60ch; }
+.medico-testo .intro { color: var(--ink); font-weight: 500; }
+.competenze { list-style: none; margin: .75rem 0 0; padding: 0; }
+@media (min-width: 36rem) { .competenze { columns: 2; column-gap: 1.75rem; } }
+.competenze li { padding-left: 1.1rem; position: relative; break-inside: avoid; margin-bottom: .5rem; }
 .competenze li::before { content: ""; position: absolute; left: 0; top: .72em; width: .5rem; height: 2px; background: var(--ocra); }
 
 /* ---------- Contatti e footer ---------- */

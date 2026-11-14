@@ -192,7 +192,7 @@
             </div>
             <div>
               <h2>Competenze</h2>
-              <ul class="competenze" style="margin-top:1.2rem">
+              <ul class="competenze">
               <li>Protocolli sanitari da DVR</li>
               <li>Idoneità alla mansione</li>
               <li>Rischio chimico e biologico</li>
@@ -413,6 +413,7 @@
         panels[j].hidden = !on;
       });
       if (focus) tabs[i].focus();
+      bar.scrollLeft = Math.max(0, tabs[i].offsetLeft - 16);
     }
     tabs.forEach(function (t, i) {
       t.addEventListener('click', function () { show(i); history.replaceState(null, '', '#' + panels[i].id); });
@@ -425,11 +426,17 @@
       var i = panels.findIndex(function (p) { return '#' + p.id === location.hash; });
       if (i < 0) return false;
       show(i);
-      bar.scrollIntoView({ block: 'start' });
+      // porta in vista la barra delle schede, sotto l'intestazione fissa
+      requestAnimationFrame(function () {
+        var top = bar.getBoundingClientRect().top + window.scrollY - document.querySelector('.site-header').offsetHeight - 16;
+        window.scrollTo(0, Math.max(0, top));
+      });
       return true;
     }
     window.addEventListener('hashchange', fromHash);
     if (!fromHash()) show(0);
+    // all'apertura con un indirizzo #scheda il browser salta sul pannello: riallineo dopo il caricamento
+    window.addEventListener('load', function () { if (location.hash) fromHash(); });
     // su telefono gli accertamenti partono chiusi: si apre solo quello che interessa
     if (!window.matchMedia('(min-width: 44rem)').matches) {
       document.querySelectorAll('.esami details').forEach(function (d) { d.open = false; });
